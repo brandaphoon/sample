@@ -14,10 +14,10 @@ class form2 extends Component{
                     <InputGroup>
                         <Row>
                             <p>REQUEST TITLE:</p>
-                            <Input placeholder="Input title" style={{ width: 400 }} />
+                            <Input placeholder="Input title here" style={{ width: 600 }} />
                         </Row>
                         <br/>
-                        <Row>
+                        <Row className= "second">
                             <Col span={5}> 
                                 <p>NETWORK:</p>
                                 <Select
@@ -43,10 +43,10 @@ class form2 extends Component{
                         </Row>
                     </InputGroup>
                 </div>
-                                <br/>
-                                <Button type="primary" htmlType="submit">
-                                    Submit
-                                </Button>
+                <br/>
+                <Button type="primary" htmlType="submit">
+                    Submit
+                </Button>
             </div>
 
         )
