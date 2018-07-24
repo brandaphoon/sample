@@ -4,22 +4,29 @@ import './App.css';
 import { Row, Col } from 'antd';
 import Menu from './Components/Menu';
 import Forms from './Components/Forms';
-
-
-
+import Dashboard from './Components/Dashboard';
+import Assign from './Components/Assign';
+import {
+    BrowserRouter as Router,
+    Route,
+    Switch,
+} from 'react-router-dom' 
 
 class App extends Component {
     render() {
         return (
+            <Router>
             <Row gutter={40}>
                 <Col span={18} push={6}>
                     <div>
-                        <h1>SPCR</h1>
-                        <br/>
-                        <h1><strong>SUBMIT NEW REQUEST</strong></h1>
-                        <br/>
-                        <h3><strong>BASIC INFO</strong></h3>
-                        <Forms/>
+                        
+                        <Switch>
+                            <Route exact path="/" component={Forms}/>
+                            <Route path="/create" component={Forms}/>
+                            <Route path="/dashboard" component={Dashboard}/>
+                            <Route path="/assign" component={Assign}/>
+                        </Switch>
+                        
                    </div>
                 </Col>
                 <Col span={6} pull={18}>
@@ -28,10 +35,9 @@ class App extends Component {
                     </div>
                 </Col>
             </Row>
-
-
+            </Router>
         );
-        }
+    }
   }
   
 

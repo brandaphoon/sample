@@ -1,25 +1,18 @@
 import { Input, Select, Button, Col, Row} from 'antd';
 import React, { Component } from 'react';
-import './Forms.css';
 
 const InputGroup = Input.Group;
 const Option = Select.Option;
 
-class form2 extends Component{
+class Dashboard extends Component{
     render() {
 
         return (
             <div>
-                <h1>SPCR</h1>
-                <br/>
-                <h1><strong>SUBMIT NEW REQUEST</strong></h1>
-                <br/>
-                <h3><strong>BASIC INFO</strong></h3>
-                
-                <div className="outline">  
+                <div>  
                     <InputGroup>
                         <Row>
-                            <p>REQUEST TITLE:</p>
+                            <p>Dashboard</p>
                             <Input placeholder="Input title here" style={{ width: 600 }} />
                         </Row>
                         <br/>
@@ -59,4 +52,4 @@ class form2 extends Component{
     }
 }
 
-export default form2;
+export default Dashboard;
