@@ -5,22 +5,23 @@ const InputGroup = Input.Group;
 const Option = Select.Option;
 
 class Assign extends Component{
-    render() {
 
+    render() {
+               
         return (
             <div>
                 <div>  
                     <InputGroup>
                         <Row>
                             <p>Assign</p>
-                            <Input placeholder="Input title here" style={{ width: 600 }} />
+                            <Input placeholder={this.props.match.params.title} style={{ width: 600 }} />
                         </Row>
                         <br/>
                         <Row className= "second">
                             <Col span={5}> 
                                 <p>NETWORK:</p>
                                 <Select
-                                    placeholder="POP"
+                                    placeholder={this.props.match.params.network}
                                     style={{ width: 125 }}
                                 >
                                 <Option value="POP">POP</Option>
@@ -31,7 +32,7 @@ class Assign extends Component{
                             <Col span = {5}>
                                 <p>SYSTEM:</p>
                                 <Select
-                                    placeholder="OPTIMUS"
+                                    placeholder={this.props.match.params.system}
                                     style={{ width: 125 }}
                                 >
                                     <Option value="OPTIMUS">OPTIMUS</Option>

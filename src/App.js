@@ -3,7 +3,8 @@ import 'antd/dist/antd.css';
 import './App.css';
 import { Row, Col } from 'antd';
 import Menu from './Components/Menu';
-import Forms from './Components/Forms';
+// import Forms from './Components/Forms';
+import Wrappedform2 from './Components/Forms';
 import Dashboard from './Components/Dashboard';
 import Assign from './Components/Assign';
 import {
@@ -21,10 +22,10 @@ class App extends Component {
                     <div>
                         
                         <Switch>
-                            <Route exact path="/" component={Forms}/>
-                            <Route path="/create" component={Forms}/>
+                            <Route exact path="/" component={Wrappedform2}/>
+                            <Route path="/create" component={Wrappedform2}/>
                             <Route path="/dashboard" component={Dashboard}/>
-                            <Route path="/assign" component={Assign}/>
+                            <Route path="/assign/:title/:network/:system" component={Assign}/>
                         </Switch>
                         
                    </div>
